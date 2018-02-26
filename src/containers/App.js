@@ -34,11 +34,11 @@ class App extends Component {
 				<section className="smarkets-app">
 					<Header />
 					<Switch>
-						<Route exact path="/index.html" render={({}) => (
-							<Redirect to="/"/>
+						<Route exact path="/" render={({match}) => (
+							<Redirect to="/popular-events"/>
 						)} />
-						<Route path="/" render={(props) => (
-							<Home {...props} to="/" label="Popular Events" events={this.state.popularEvents} />
+						<Route path="/popular-events" render={(props) => (
+							<Home {...props} to="/popular-events" label="Popular Events" events={this.state.popularEvents} />
 						)} />
 						<Route path="/event/id/:id" render={(props) => (
 							<EventInformation {...props} to="/event/id/:id" label="Event" currentEvent={this.state.currentEvent} updateCurrentEventInformation={this.updateCurrentEventInformation}/>

@@ -21,7 +21,7 @@ export class EventInformation extends Component {
 		} else {
 			return (
 				<main data-id={this.props.match.params.id} className="event-information-container container">
-					<Link to={'/'} className="back row">Back To Popular Events</Link>
+					<Link to={'/popular-events'} className="back row">Back To Popular Events</Link>
 					<section className="event-information row">
 						<p className="subject col-6">Event Name:</p><p className="content col-6">{this.props.currentEvent.name}</p>
 						<p className="subject col-6">Event Type:</p><p className="content col-6">{this.props.currentEvent.event_type}</p>
